@@ -20,7 +20,10 @@ if [ ! $NOIS_NODENAME ]; then
 	read -p "Enter node name: " NOIS_NODENAME
 	echo 'export NOIS_NODENAME='$NOIS_NODENAME >> $HOME/.bash_profile
 fi
-NOIS_PORT=30
+if [ ! $NOIS_PORT ]; then
+	read -p "Enter node port: " NOIS_PORT
+	echo 'export NOIS_PORT='$NOIS_PORT >> $HOME/.bash_profile
+fi
 if [ ! $WALLET ]; then
 	echo "export WALLET=wallet" >> $HOME/.bash_profile
 fi
