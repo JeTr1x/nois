@@ -65,7 +65,7 @@ cd $HOME
 git clone https://github.com/noislabs/full-node.git 
 cd full-node/full-node/
 ./build.sh
-mv out/noisd $HOME/go/bin/
+mv full-node/full-node/out/noisd /usr/local/go/bin/
 
 # config
 noisd config chain-id $NOIS_CHAIN_ID
